@@ -42,7 +42,7 @@ cp -r lib/ student-submission/ListExamples.java TestListExamples.java grading-ar
 # tests
 
 cd grading-area
-CPATH='.:ib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 javac -cp $CPATH *.java &> /dev/null
 
 if [[ $? != 0 ]]
@@ -54,3 +54,5 @@ fi
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test_output.txt
 
 grep -i "tests" test_output.txt
+
+
